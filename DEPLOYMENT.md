@@ -12,5 +12,5 @@
 ## Unlisted test build
 
 - Path: `/test-060a4/` (no link from root index)
-- Identity: `0.6.0-a4t` isolated TEST (IDB `dragon-master-trilli-test`, Workbox prefix `dragon-master-trilli-test`)
+- Identity: `0.6.0-a4t2` isolated TEST (IDB `dragon-master-trilli-test`, Workbox prefix `dragon-master-trilli-test`)
 - Root NavigationRoute denylist lets this path load from network under 0.5.5+
