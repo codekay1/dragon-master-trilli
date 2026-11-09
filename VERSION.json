@@ -1,12 +1,10 @@
 {
   "name": "Dragon Adventures",
-  "version": "0.6.0",
-  "builtAtUtc": "20261109T163653Z",
+  "version": "0.7.0",
+  "builtAtUtc": "20261109T220452Z",
   "channel": "hosted-qa-release-candidate",
   "testApi": false,
   "sourcemaps": false,
   "downloadZip": "download/dragon-master-trilli.zip",
-  "notes": "Public GitHub Pages runtime deploy of Dragon Adventures 0.6.0 (rc2). IDB/cacheId unchanged; test-* NavigationRoute denylist kept. Frozen tree left intact.",
-  "hosting": "github-pages",
-  "pagesBase": "/dragon-master-trilli/"
+  "notes": "Dragon Adventures 0.7.0-r2: rider camera over the shoulders with a forward-and-down neck; visible mouth-emitted fire breath; readable camp wildlife; fountain water arcs. Same 0.7.0 features and schema v3. IDB/cacheId/test-* denylist unchanged. Do not mutate after SHA256SUMS."
 }

@@ -18,8 +18,8 @@
   <meta name="description" content="Dragon Adventures — offline dragon adventure" />
   <link rel="icon" type="image/svg+xml" href="./assets/favicon-CZcMHXGO.svg" />
   <title>Dragon Adventures</title>
-  <script type="module" crossorigin src="./assets/index-lpX5p8WC.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-CD9xJ6So.css">
+  <script type="module" crossorigin src="./assets/index-DXamooey.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-OhGTj3Os.css">
 <link rel="manifest" href="./manifest.webmanifest"></head>
 <body>
   <div id="no-webgl" class="overlay hidden">
@@ -55,7 +55,22 @@
     <div id="toast" role="status"></div>
     <div id="selected-item"></div>
     <div id="objective" class="objective"></div>
-    <div id="hotbar" aria-label="Inventory"></div>
+    <div id="hotbar-wrap">
+      <div id="hotbar" aria-label="Hotbar"></div>
+      <button id="btn-bag" type="button" title="Backpack (I)" aria-label="Open backpack">Bag</button>
+    </div>
+  </div>
+
+  <div id="day-veil" aria-hidden="true"></div>
+  <div id="sleep-fade" aria-hidden="true"></div>
+
+  <div id="inv-overlay" class="overlay hidden" role="dialog" aria-label="Backpack">
+    <div class="panel wide">
+      <h2>Backpack</h2>
+      <p class="tiny">Items you are carrying. Number keys still switch the hotbar.</p>
+      <div id="inv-grid" class="inv-grid"></div>
+      <button id="btn-inv-close" type="button" class="secondary">Close (I)</button>
+    </div>
   </div>
 
   <div id="touch">
@@ -65,6 +80,7 @@
     <button id="touch-action" type="button">Attack</button>
     <button id="touch-mount" type="button">Mount</button>
     <button id="touch-recenter" type="button" title="Recenter look (C / Home)">Level view</button>
+    <button id="touch-fire" type="button" title="Fire breath (Q)">Fire</button>
   </div>
 
   <div id="title" class="overlay">
@@ -95,6 +111,10 @@
         <li id="help-hotbar-slots"><kbd>1</kbd> Sword · <kbd>2</kbd> Drumstick · <kbd>3</kbd> Bread · <kbd>4</kbd> Wood block · <kbd>5</kbd> Stone block</li>
         <li>Select drumstick, walk up to a dragon, <strong>right-click</strong> when prompted to feed &amp; tame. Then <kbd>E</kbd> mount · Space fly · land low · <kbd>E</kbd> dismount.</li>
         <li>Select Wood/Stone to build: ghost preview shows placement · right-click place · <kbd>X</kbd> remove looking-at block. Place a few on the yellow pad, then press <kbd>R</kbd> Ready.</li>
+        <li><kbd>6</kbd> Axe chops trees (wood logs go in your pack). <kbd>7</kbd> Pickaxe · <kbd>8</kbd> Bucket · <kbd>9</kbd> Torch.</li>
+        <li>Tap the Bag button or press <kbd>I</kbd> to open your backpack. Pick berries and fruit (press <kbd>F</kbd>) and eat them to restore hearts.</li>
+        <li>While riding, press <kbd>Q</kbd> (or Fire) to breathe a harmless flame that can light the campfire and torches. <kbd>E</kbd> dismounts you beside the dragon.</li>
+        <li>Sleep in the cabin bed (<kbd>F</kbd>) to skip to morning. Fill your bucket at the castle fountain.</li>
         <li>Monsters stay peaceful until <strong>you</strong> hit them — only that one fights back.</li>
         <li><kbd>C</kbd> or <kbd>Home</kbd> (or Look button) recenters the camera if it tips up.</li>
         <li>Esc = pause / save / install tips.</li>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Bucket">
+  <title>Bucket</title>
+  <path d="M18 26 L22 54 H42 L46 26 Z" fill="#6a6e78" stroke="#2a2430" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M20 26 A12 10 0 0 1 44 26" fill="none" stroke="#4a4e56" stroke-width="3"/>
+</svg>
