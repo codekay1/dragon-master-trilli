@@ -1,12 +1,12 @@
 {
   "name": "Dragon Adventures",
-  "version": "0.5.3",
-  "builtAtUtc": "20261109T060808Z",
+  "version": "0.5.4",
+  "builtAtUtc": "20261109T065455Z",
   "channel": "hosted-qa-fix-candidate",
   "testApi": false,
   "sourcemaps": false,
   "downloadZip": "download/dragon-master-trilli.zip",
-  "notes": "Public GitHub Pages runtime deploy copy of frozen Dragon Adventures 0.5.3 (SW CDN update rescue; build-pad 3/3 free-cell). IDB/cache names unchanged. Frozen tree left intact.",
+  "notes": "Public GitHub Pages runtime deploy copy of frozen Dragon Adventures 0.5.4 (terrain scene.add hotfix; pitch clamp; recenter). IDB/cache names unchanged. Frozen tree left intact.",
   "hosting": "github-pages",
   "pagesBase": "/dragon-master-trilli/"
 }

@@ -17,6 +17,7 @@ ZIP under `download/` is a static-file mirror for backup/hosting — **not** a d
 ## Controls
 
 - **W** forward, **S** back, **A** left, **D** right (relative to camera)
+- **C** / **Home** (or touch **Level view**) recenter pitch
 - Mouse look; Minecraft-style interaction; basic touch support
 
 ## Privacy & saves
@@ -29,7 +30,7 @@ ZIP under `download/` is a static-file mirror for backup/hosting — **not** a d
 
 ## Version
 
-See `VERSION.json` (`0.5.3`). Third-party notices: `NOTICE.txt`, `ASSET-LICENSES.txt`, and `licenses/`.
+See `VERSION.json` (`0.5.4`). Third-party notices: `NOTICE.txt`, `ASSET-LICENSES.txt`, and `licenses/`.
 
 ## Deploy note
 

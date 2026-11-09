@@ -18,8 +18,9 @@
   <meta name="description" content="Dragon Adventures — offline dragon adventure" />
   <link rel="icon" type="image/svg+xml" href="./assets/favicon-CZcMHXGO.svg" />
   <title>Dragon Adventures</title>
-  <script type="module" crossorigin src="./assets/index-Bqn-Pmd-.js"></script>
+  <script type="module" crossorigin src="./assets/index-v054-e2106bff.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-igaQ9Juz.css">
+<style>#touch-recenter{left:160px;bottom:130px;background:#3a6a9a}</style>
 <link rel="manifest" href="./manifest.webmanifest"></head>
 <body>
   <div id="no-webgl" class="overlay hidden">
@@ -60,6 +61,7 @@
     <button id="touch-jump" type="button">Jump</button>
     <button id="touch-action" type="button">Attack</button>
     <button id="touch-mount" type="button">Mount</button>
+    <button id="touch-recenter" type="button" aria-label="Level view (recenter camera)">Level view</button>
   </div>
 
   <div id="title" class="overlay">
@@ -83,7 +85,7 @@
     <div class="panel wide">
       <h1>How to play</h1>
       <ul class="howto-list">
-        <li><kbd>WASD</kbd> move · double-tap <kbd>W</kbd> sprint · <kbd>Space</kbd> jump (or take off when mounted)</li>
+        <li id="help-controls"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> move · double-tap <kbd>W</kbd> sprint · <kbd>Space</kbd> jump (or take off when mounted) · <kbd>C</kbd> / <kbd>Home</kbd> recenter view (touch: Level view button) · <kbd>Esc</kbd> pause</li>
         <li>Click the game to look around. <strong>Left click</strong> = sword swing. Prompts appear when something is in range.</li>
         <li id="help-hotbar-slots"><kbd>1</kbd> Sword · <kbd>2</kbd> Drumstick · <kbd>3</kbd> Bread · <kbd>4</kbd> Wood block · <kbd>5</kbd> Stone block</li>
         <li>Select drumstick, walk up to a dragon, <strong>right-click</strong> when prompted to feed &amp; tame. Then <kbd>E</kbd> mount · Space fly · land low · <kbd>E</kbd> dismount.</li>
