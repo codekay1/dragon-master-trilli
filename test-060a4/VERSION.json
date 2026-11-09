@@ -1,0 +1,12 @@
+{
+  "name": "Dragon Adventures TEST",
+  "version": "0.6.0-a4t",
+  "builtAtUtc": "20261109T124703Z",
+  "channel": "hosted-qa-test-isolated",
+  "testApi": false,
+  "sourcemaps": false,
+  "downloadZip": "download/dragon-master-trilli-test.zip",
+  "notes": "Public unlisted test deploy of Dragon Adventures 0.6.0-a4t under /test-060a4/. Isolated IDB/cacheId. Root game remains separate.",
+  "hosting": "github-pages",
+  "pagesBase": "/dragon-master-trilli/test-060a4/"
+}

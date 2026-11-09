@@ -1,0 +1,19 @@
+Dragon Adventures — Install / offline play
+==========================================
+
+Hosted install (including GitHub Pages project subpath):
+- Open the game at a URL that ends with a slash, e.g.
+  https://<user>.github.io/dragon-master-trilli/
+  (not …/dragon-master-trilli without the slash).
+- First visit must be online until the HUD shows “Offline ready”.
+- Bookmark and/or your browser’s “Install page / Install app” when offered
+  (exact ChromeOS menu labels vary — verify on device).
+- Quit the browser fully, disable network, cold-launch from bookmark/Launcher.
+  Origin host may be unreachable; assets must come from the service worker cache.
+
+ZIP (./download/dragon-master-trilli.zip):
+- Static site mirror for backup/hosting — NOT a file:// app installer.
+- Archive filename keeps the project path name; the game title is Dragon Adventures.
+
+Saves are origin-scoped (scheme+host+port). Keep the same URL prefix.
+IndexedDB database name is unchanged so existing local saves keep working.

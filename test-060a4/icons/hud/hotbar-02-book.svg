@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Hotbar book (title text uncertain — marks only)">
+  <title>Hotbar book (title text uncertain — marks only)</title>
+  <g transform="rotate(-22 32 32)">
+    <rect x="14" y="12" width="36" height="40" rx="3" fill="#e88aaa" stroke="#2a2430" stroke-width="2.5"/>
+    <rect x="18" y="16" width="28" height="32" rx="1.5" fill="#f5e8d8" stroke="#2a2430" stroke-width="1.5"/>
+    <line x1="22" y1="26" x2="42" y2="22" stroke="#5a3048" stroke-width="2.3" stroke-linecap="round"/>
+    <line x1="23" y1="34" x2="41" y2="30" stroke="#5a3048" stroke-width="2.3" stroke-linecap="round"/>
+    <line x1="24" y1="42" x2="38" y2="39" stroke="#5a3048" stroke-width="2.0" stroke-linecap="round" opacity="0.75"/>
+  </g>
+</svg>
