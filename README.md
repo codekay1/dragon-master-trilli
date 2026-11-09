@@ -29,7 +29,7 @@ ZIP under `download/` is a static-file mirror for backup/hosting — **not** a d
 
 ## Version
 
-See `VERSION.json` (`0.5.2`). Third-party notices: `NOTICE.txt`, `ASSET-LICENSES.txt`, and `licenses/`.
+See `VERSION.json` (`0.5.3`). Third-party notices: `NOTICE.txt`, `ASSET-LICENSES.txt`, and `licenses/`.
 
 ## Deploy note
 
