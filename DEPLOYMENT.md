@@ -5,5 +5,5 @@
 - Hosting: GitHub Pages, branch `main`, project site base `/dragon-master-trilli/`
 - IDB name / Workbox cacheId: `dragon-master-trilli` (unchanged)
 - NavigationRoute denylist: `[/^\/api/, /\/test-[^/]*(\/|$)/]` so unlisted `/test-*` paths load from network
-- Unlisted test folder: `/test-060a4/` (currently 0.6.0-a4t2; isolated; no link from root index)
+- Unlisted test folder `/test-060a4/` removed (Winston request). Root SW denylist for `/test-*` retained.
 - ZIP SHA256: `933f4975f12cb9ec0372a6761a91a846d09e01191bea139c7306cbd6797c311c`

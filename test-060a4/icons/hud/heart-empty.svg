@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Heart empty">
-  <title>Heart empty</title>
-  <path d="M 32,28.0 C 18.0,12.0 4.0,32.0 32,52.0 C 60.0,32.0 46.0,12.0 32,28.0 Z" fill="#3a3340" stroke="#2a2430" stroke-width="3.0" stroke-linejoin="round"/>
-  <path d="M 32,28.0 C 18.0,12.0 4.0,32.0 32,52.0 C 60.0,32.0 46.0,12.0 32,28.0 Z" fill="none" stroke="#c04878" stroke-width="1.5" stroke-linejoin="round" opacity="0.45"/>
-</svg>
