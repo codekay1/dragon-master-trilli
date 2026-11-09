@@ -18,8 +18,8 @@
   <meta name="description" content="Dragon Adventures — offline dragon adventure" />
   <link rel="icon" type="image/svg+xml" href="./assets/favicon-CZcMHXGO.svg" />
   <title>Dragon Adventures</title>
-  <script type="module" crossorigin src="./assets/index-CFw4-Lsm.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-CtUGrEP4.css">
+  <script type="module" crossorigin src="./assets/index-C_BJEQTb.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DxYCLXX8.css">
 <link rel="manifest" href="./manifest.webmanifest"></head>
 <body>
   <div id="no-webgl" class="overlay hidden">
@@ -66,6 +66,7 @@
     <div class="panel title-panel">
       <div id="title-hero-preview" aria-hidden="true"></div>
       <h1>Dragon Adventures</h1>
+      <p id="title-version" class="version-tag">v…</p>
       <p class="lead">Build a little camp, feed a colorful dragon, then explore when <em>you</em> are ready.</p>
       <div class="title-actions">
         <button id="btn-start" type="button" class="primary">Play</button>
@@ -84,7 +85,7 @@
       <ul class="howto-list">
         <li><kbd>WASD</kbd> move · double-tap <kbd>W</kbd> sprint · <kbd>Space</kbd> jump (or take off when mounted)</li>
         <li>Click the game to look around. <strong>Left click</strong> = sword swing. Prompts appear when something is in range.</li>
-        <li><kbd>1</kbd> Sword · <kbd>2</kbd> Drumstick (feed dragons) · <kbd>3</kbd> Bread (heal you) · <kbd>4</kbd>/<kbd>5</kbd> Wood/Stone blocks</li>
+        <li id="help-hotbar-slots"><kbd>1</kbd> Sword · <kbd>2</kbd> Drumstick · <kbd>3</kbd> Bread · <kbd>4</kbd> Wood block · <kbd>5</kbd> Stone block</li>
         <li>Select drumstick, walk up to a dragon, <strong>right-click</strong> when prompted to feed &amp; tame. Then <kbd>E</kbd> mount · Space fly · land low · <kbd>E</kbd> dismount.</li>
         <li>Select Wood/Stone to build: ghost preview shows placement · right-click place · <kbd>X</kbd> remove looking-at block. Place a few on the yellow pad, then press <kbd>R</kbd> Ready.</li>
         <li>Monsters stay peaceful until <strong>you</strong> hit them — only that one fights back.</li>
@@ -112,6 +113,7 @@
   <div id="pause" class="overlay hidden">
     <div class="panel wide">
       <h1>Paused</h1>
+      <p id="pause-version" class="version-tag">v…</p>
       <p class="sub">Combat is off while paused. Escape or Resume to continue.</p>
       <div class="grid-btns">
         <button id="btn-resume" type="button" class="primary">Resume</button>
@@ -135,15 +137,14 @@
         <label>Shoes <input id="col-shoes" type="color" value="#4a2f6a" /></label>
       </div>
       <p class="warn">Saves stay on this device for this site address. Export a JSON backup before powerwash or clearing site data. Persistence is requested, not guaranteed. Changing origin/port starts a fresh save. ZIP download is not a file:// installer.</p>
-      <p class="note">ASSUMPTION: Level step after 5 monster defeats (Q11). “20 stars unlock levels” (Q28) stays optional/off by default.</p>
-      <p id="save-msg" class="save-msg"></p>
+            <p id="save-msg" class="save-msg"></p>
       <p id="build-meta" class="tiny"></p>
     </div>
   </div>
 
-  <div id="update-banner" class="hidden">
-    Update ready — apply next time you open the game?
-    <button id="btn-update" type="button">Update</button>
+  <div id="update-banner" class="hidden" role="status">
+    <span id="update-banner-msg">Update ready — Save and restart.</span>
+    <button id="btn-update" type="button">Save &amp; restart</button>
     <button id="btn-update-later" type="button">Later</button>
   </div>
 

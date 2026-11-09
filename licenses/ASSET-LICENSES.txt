@@ -1,0 +1,18 @@
+Dragon Adventures — local asset licenses (v0.5.0)
+================================================
+All textures used by the game are generated at runtime from procedural
+canvas paint routines in src/world/textures.ts (original patterns).
+Nothing is fetched over the network at runtime.
+
+HUD icons under public/icons/hud/ are copied from
+/workspace/dragon-master-trilli-art (flat vector HUD). See that folder's
+README for attribution. Wood and stone hotbar icons (hotbar-wood.svg,
+hotbar-stone.svg) are original game UI assets in the same style.
+
+No paid / commercial third-party packs are bundled.
+Treat procedural textures as CC0-equivalent original work for this project.
+
+## textures-v1 (Motion Graphics pack)
+Shipped as WebP under public/textures/v1/. PNG masters are NOT in the game tree or precache
+(they live in the separate art workspace). Original procedural art for this game.
+Color: sRGB. Normals: linear, OpenGL +Y. No roughness maps.

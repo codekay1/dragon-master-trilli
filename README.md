@@ -2,7 +2,7 @@
 
 Internal QA candidate — **not** final quality-accepted.
 
-Offline-friendly Chromebook dragon adventure. This repository contains **compiled runtime assets only** (no game source, workbook, photos, or private intake).
+Offline-friendly Chromebook dragon adventure. This repository contains **compiled runtime assets only** (no game source, workbook, photos, PNG texture masters, or private intake).
 
 The playable title is **Dragon Adventures**. Repository and Pages path keep the historical name `dragon-master-trilli` so bookmarks and existing installs continue to work.
 
@@ -29,7 +29,7 @@ ZIP under `download/` is a static-file mirror for backup/hosting — **not** a d
 
 ## Version
 
-See `VERSION.json` (`0.4.1-spawn-frustum`). Third-party notices: `NOTICE.txt` and `licenses/`.
+See `VERSION.json` (`0.5.2`). Third-party notices: `NOTICE.txt`, `ASSET-LICENSES.txt`, and `licenses/`.
 
 ## Deploy note
 

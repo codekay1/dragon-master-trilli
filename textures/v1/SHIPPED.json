@@ -1,0 +1,99 @@
+{
+  "pack": "textures-v1-shipped-webp",
+  "masters": "NOT shipped \u2014 art workspace PNG only",
+  "conventions": "color=sRGB; normal=linear NoColorSpace OpenGL +Y; no roughness maps",
+  "files": [
+    {
+      "file": "cloud_01_256.webp",
+      "bytes": 2930
+    },
+    {
+      "file": "cloud_02_256.webp",
+      "bytes": 3018
+    },
+    {
+      "file": "cloud_03_256.webp",
+      "bytes": 2950
+    },
+    {
+      "file": "dirt_color.webp",
+      "bytes": 10894
+    },
+    {
+      "file": "dirt_normal.webp",
+      "bytes": 12300
+    },
+    {
+      "file": "dragon_belly_color.webp",
+      "bytes": 3268
+    },
+    {
+      "file": "dragon_scales_color.webp",
+      "bytes": 29984
+    },
+    {
+      "file": "dragon_scales_normal.webp",
+      "bytes": 22818
+    },
+    {
+      "file": "grass_color.webp",
+      "bytes": 91330
+    },
+    {
+      "file": "grass_normal.webp",
+      "bytes": 33640
+    },
+    {
+      "file": "log_bark_color.webp",
+      "bytes": 17148
+    },
+    {
+      "file": "log_bark_normal.webp",
+      "bytes": 19956
+    },
+    {
+      "file": "log_endgrain_color.webp",
+      "bytes": 8148
+    },
+    {
+      "file": "path_dirt_blend_color.webp",
+      "bytes": 50530
+    },
+    {
+      "file": "path_normal.webp",
+      "bytes": 8610
+    },
+    {
+      "file": "rock_dirt_blend_color.webp",
+      "bytes": 24874
+    },
+    {
+      "file": "rock_normal.webp",
+      "bytes": 14800
+    },
+    {
+      "file": "roof_shingles_color.webp",
+      "bytes": 25230
+    },
+    {
+      "file": "roof_shingles_normal.webp",
+      "bytes": 11362
+    },
+    {
+      "file": "water_ripple_normal.webp",
+      "bytes": 5138
+    },
+    {
+      "file": "wing_membrane.webp",
+      "bytes": 47498
+    }
+  ],
+  "total_bytes": 446426,
+  "total_kib": 435.96,
+  "tier_bytes": {
+    "low_colors_only": 317802,
+    "medium_high_colors_plus_normals": 446426,
+    "normals_only": 128624,
+    "all_on_disk": 446426
+  }
+}

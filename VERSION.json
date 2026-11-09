@@ -1,12 +1,12 @@
 {
   "name": "Dragon Adventures",
-  "version": "0.4.1-spawn-frustum",
-  "builtAtUtc": "20261109T033031Z",
+  "version": "0.5.2",
+  "builtAtUtc": "20261109T053212Z",
   "channel": "hosted-qa-fix-candidate",
   "testApi": false,
   "sourcemaps": false,
   "downloadZip": "download/dragon-master-trilli.zip",
-  "notes": "Public GitHub Pages runtime deploy copy of frozen Dragon Adventures 0.4.1-spawn-frustum (WASD fix, rename, spawn frustum). IDB/cache names unchanged. Frozen tree left intact.",
+  "notes": "Public GitHub Pages runtime deploy copy of frozen Dragon Adventures 0.5.2 (textures-v1 WebP; masters not shipped). IDB/cache names unchanged. Frozen tree left intact.",
   "hosting": "github-pages",
   "pagesBase": "/dragon-master-trilli/"
 }
