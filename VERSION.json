@@ -1,12 +1,12 @@
 {
   "name": "Dragon Adventures",
-  "version": "0.5.5",
-  "builtAtUtc": "20261109T124301Z",
-  "channel": "hosted-qa-fix-candidate",
+  "version": "0.6.0",
+  "builtAtUtc": "20261109T163653Z",
+  "channel": "hosted-qa-release-candidate",
   "testApi": false,
   "sourcemaps": false,
   "downloadZip": "download/dragon-master-trilli.zip",
-  "notes": "Public GitHub Pages runtime deploy copy of frozen Dragon Adventures 0.5.5 (0.5.4 + NavigationRoute denylist for /test-* paths). IDB/cache names unchanged. Frozen tree left intact.",
+  "notes": "Public GitHub Pages runtime deploy of Dragon Adventures 0.6.0 (rc2). IDB/cacheId unchanged; test-* NavigationRoute denylist kept. Frozen tree left intact.",
   "hosting": "github-pages",
   "pagesBase": "/dragon-master-trilli/"
 }

@@ -1,16 +1,9 @@
 # Deployment metadata
 
-- Release identity: `0.5.5` (playable title: **Dragon Adventures**)
-- Source frozen path (box, not in repo): `/workspace/dragon-master-trilli/release/frozen-v0.5.5/`
-- Hosting: GitHub Pages, branch `main`, site root `/` (project site base `/dragon-master-trilli/`)
-- 0.5.5 = 0.5.4 + NavigationRoute denylist `[/^\/api/, /\/test-[^/]*(\/|$)/]` so unlisted `/test-*` paths load from network
-- IDB name / Workbox cacheId unchanged from 0.5.4
-- No Cloudflare mutation for this publish path
-- Channel: hosted-qa-fix-candidate (QA)
-- ZIP SHA256: `0ac71646703c4e0e0f2f22c49e872934ab1fe071f5062a510ce11c76cf041a89`
-
-## Unlisted test build
-
-- Path: `/test-060a4/` (no link from root index)
-- Identity: `0.6.0-a4t2` isolated TEST (IDB `dragon-master-trilli-test`, Workbox prefix `dragon-master-trilli-test`)
-- Root NavigationRoute denylist lets this path load from network under 0.5.5+
+- Release identity: `0.6.0` (from freeze `frozen-v0.6.0-rc2`; playable title **Dragon Adventures**)
+- Source frozen path (box, not in repo): `/workspace/dragon-master-trilli/release/frozen-v0.6.0-rc2/`
+- Hosting: GitHub Pages, branch `main`, project site base `/dragon-master-trilli/`
+- IDB name / Workbox cacheId: `dragon-master-trilli` (unchanged)
+- NavigationRoute denylist: `[/^\/api/, /\/test-[^/]*(\/|$)/]` so unlisted `/test-*` paths load from network
+- Unlisted test folder: `/test-060a4/` (currently 0.6.0-a4t2; isolated; no link from root index)
+- ZIP SHA256: `933f4975f12cb9ec0372a6761a91a846d09e01191bea139c7306cbd6797c311c`
