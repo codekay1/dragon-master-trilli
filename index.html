@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#3a7fd4" />
+  <meta name="description" content="Dragon Master Trilli — offline dragon adventure" />
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon-CZcMHXGO.svg" />
+  <title>Dragon Master Trilli</title>
+  <script type="module" crossorigin src="./assets/index-BDNz91aa.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-B5QSeQxk.css">
+<link rel="manifest" href="./manifest.webmanifest"></head>
+<body>
+  <div id="no-webgl" class="overlay hidden">
+    <div class="panel">
+      <h1>WebGL needed</h1>
+      <p>This game needs WebGL in Chrome. Try updating Chrome or enabling hardware acceleration.</p>
+    </div>
+  </div>
+
+  <canvas id="game" tabindex="0" aria-label="Dragon Master Trilli game view"></canvas>
+
+  <div id="hud">
+    <div id="hud-top">
+      <div id="hearts" aria-label="Hearts"></div>
+      <div id="level-wrap" title="How close to a new level">
+        <span class="lev-label">Lev <span id="lev-cur">1</span></span>
+        <div id="level-bar"><div id="level-fill"></div></div>
+        <span class="lev-label">Lev <span id="lev-next">2</span></span>
+      </div>
+      <div id="status-pills">
+        <span id="mode-pill" class="pill">Safe Build</span>
+        <span id="offline-pill" class="pill dim">Offline…</span>
+        <span id="detector" class="pill dim">Tracker: —</span>
+      </div>
+    </div>
+    <div id="crosshair" aria-hidden="true"></div>
+    <div id="toast" role="status"></div>
+    <div id="objective" class="objective"></div>
+    <div id="hotbar" aria-label="Inventory"></div>
+  </div>
+
+  <div id="touch">
+    <div id="touch-move" class="stick" aria-label="Move stick"><span class="stick-label">Move</span></div>
+    <div id="touch-look" class="stick" aria-label="Look stick"><span class="stick-label">Look</span></div>
+    <button id="touch-jump" type="button">Jump</button>
+    <button id="touch-action" type="button">Attack</button>
+    <button id="touch-mount" type="button">Mount</button>
+  </div>
+
+  <div id="title" class="overlay">
+    <div class="panel title-panel">
+      <div id="title-hero-preview" aria-hidden="true"></div>
+      <h1>Dragon Master Trilli</h1>
+      <p class="lead">Build your house, train a colorful dragon, and explore when <em>you</em> are ready.</p>
+      <button id="btn-start" type="button" class="primary">Play</button>
+      <button id="btn-howto" type="button" class="secondary">How to play</button>
+      <p class="tiny">Offline-friendly · local saves · no accounts</p>
+    </div>
+  </div>
+
+  <div id="howto" class="overlay hidden">
+    <div class="panel wide">
+      <h1>How to play</h1>
+      <ul class="howto-list">
+        <li><kbd>WASD</kbd> move · double-tap <kbd>W</kbd> sprint · <kbd>Space</kbd> jump</li>
+        <li>Click game to look · Left click attack · Right click place / feed</li>
+        <li><kbd>1</kbd>–<kbd>7</kbd> inventory · <kbd>E</kbd> mount · feed a dragon to tame · <kbd>R</kbd> ready for battle</li>
+        <li>Monsters stay peaceful until <strong>you</strong> hit them — only that one fights back.</li>
+        <li>Esc opens pause / save / customize.</li>
+      </ul>
+      <button id="btn-howto-close" type="button" class="primary">Got it</button>
+    </div>
+  </div>
+
+  <div id="pause" class="overlay hidden">
+    <div class="panel wide">
+      <h1>Paused</h1>
+      <p class="sub">Combat is off while paused. Escape or Resume to continue.</p>
+      <div class="grid-btns">
+        <button id="btn-resume" type="button" class="primary">Resume</button>
+        <button id="btn-ready" type="button">I'm Ready to Battle</button>
+        <button id="btn-safe" type="button">Safe Build</button>
+        <button id="btn-save" type="button">Save Now</button>
+        <button id="btn-export" type="button">Export Save</button>
+        <label class="file-btn">Import Save<input id="import-file" type="file" accept="application/json,.json" hidden /></label>
+        <button id="btn-mute" type="button">Mute: Off</button>
+        <button id="btn-quality" type="button">Quality: Medium</button>
+        <button id="btn-weather" type="button">Weather: Off</button>
+        <button id="btn-appear" type="button">Customize Look</button>
+        <button id="btn-help" type="button">Controls</button>
+      </div>
+      <div id="appear-panel" class="hidden">
+        <label>Hair <input id="col-hair" type="color" value="#f5d94a" /></label>
+        <label>Shirt <input id="col-top" type="color" value="#3a7fd4" /></label>
+        <label>Pants <input id="col-pants" type="color" value="#9b7bc8" /></label>
+        <label>Shoes <input id="col-shoes" type="color" value="#4a2f6a" /></label>
+      </div>
+      <p class="warn">Saves stay on this Chromebook (this site address). Export a backup — powerwash can erase local data. Persistence is requested, not guaranteed. Changing port/origin starts a fresh save.</p>
+      <p class="note">ASSUMPTION: Level step after 5 monster defeats (Q11). “20 stars unlock levels” (Q28) stays optional/off by default.</p>
+      <p id="save-msg" class="save-msg"></p>
+      <p id="build-meta" class="tiny"></p>
+    </div>
+  </div>
+
+  <div id="update-banner" class="hidden">
+    Update ready — apply next time you open the game?
+    <button id="btn-update" type="button">Update</button>
+    <button id="btn-update-later" type="button">Later</button>
+  </div>
+
+</body>
+</html>

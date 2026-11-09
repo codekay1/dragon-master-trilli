@@ -1,0 +1,29 @@
+Dragon Master Trilli — Install / offline play
+=============================================
+
+RELEASE GATE intent: after one online install, cold-start the game with network
+off and the original website unreachable (no localhost server on the Chromebook).
+
+Recommended path (HTTPS host — parent deploys):
+1. On the Chromebook, open the game’s HTTPS link in Chrome while online.
+2. Wait until the HUD shows “Offline ready” (first visit downloads/caches assets).
+3. Bookmark the page (star in the address bar) and/or install as an app:
+   - Documented Chrome pattern: Chrome menu (⋮) → “Cast, save, and share” /
+     “Save and share” → “Install page…” / “Install app…” when offered.
+   - Exact menu labels vary by ChromeOS/Chrome version — confirm on the device
+     (PENDING device verification; do not invent a single menu path as universal).
+4. Quit Chrome completely (not just the tab): shelf Chrome icon → Quit, or
+   chrome://settings quit if needed so no background page keeps the old session.
+5. Turn off Wi‑Fi / enable airplane mode (origin host unreachable).
+6. Relaunch from the bookmark or Launcher installed app — game must load from
+   cache with no network.
+
+ZIP download (dragon-master-trilli.zip):
+- Mirror of static site files for backup/hosting — NOT a double-click installer.
+- Opening index.html via file:// is unreliable (service worker / saves / lock).
+- Prefer HTTPS hosting of the unzipped folder (or the parent’s hosted URL).
+
+Saves: local to this Chromebook + this site origin only. Export JSON backups.
+Changing origin/port = new empty save. Powerwash can erase data.
+
+Updates: optional, user-confirmed between sessions — never forced mid-play.

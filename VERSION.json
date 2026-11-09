@@ -1,0 +1,12 @@
+{
+  "name": "Dragon Master Trilli",
+  "version": "0.3.1-offline-gate",
+  "builtAtUtc": "20261109T023659Z",
+  "channel": "polished-internal-candidate",
+  "testApi": false,
+  "sourcemaps": false,
+  "downloadZip": "download/dragon-master-trilli.zip",
+  "notes": "Public GitHub Pages runtime deploy copy of frozen 0.3.1-offline-gate. Internal QA candidate. Frozen tree left intact.",
+  "hosting": "github-pages",
+  "pagesBase": "/dragon-master-trilli/"
+}

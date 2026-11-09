@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Hotbar drumstick">
+  <title>Hotbar drumstick</title>
+  <g transform="rotate(28 32 32)">
+    <ellipse cx="34" cy="24" rx="14" ry="11" fill="#8a5a3a" stroke="#2a2430" stroke-width="2.5"/>
+    <rect x="29" y="30" width="10" height="22" rx="3" fill="#e8d8c0" stroke="#2a2430" stroke-width="2.5"/>
+    <circle cx="30" cy="54" r="4" fill="#e8d8c0" stroke="#2a2430" stroke-width="2"/>
+    <circle cx="38" cy="54" r="4" fill="#e8d8c0" stroke="#2a2430" stroke-width="2"/>
+  </g>
+</svg>
