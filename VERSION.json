@@ -1,12 +1,12 @@
 {
-  "name": "Dragon Master Trilli",
-  "version": "0.3.1-offline-gate",
-  "builtAtUtc": "20261109T023659Z",
-  "channel": "polished-internal-candidate",
+  "name": "Dragon Adventures",
+  "version": "0.4.1-spawn-frustum",
+  "builtAtUtc": "20261109T033031Z",
+  "channel": "hosted-qa-fix-candidate",
   "testApi": false,
   "sourcemaps": false,
   "downloadZip": "download/dragon-master-trilli.zip",
-  "notes": "Public GitHub Pages runtime deploy copy of frozen 0.3.1-offline-gate. Internal QA candidate. Frozen tree left intact.",
+  "notes": "Public GitHub Pages runtime deploy copy of frozen Dragon Adventures 0.4.1-spawn-frustum (WASD fix, rename, spawn frustum). IDB/cache names unchanged. Frozen tree left intact.",
   "hosting": "github-pages",
   "pagesBase": "/dragon-master-trilli/"
 }

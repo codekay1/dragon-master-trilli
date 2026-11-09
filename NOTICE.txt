@@ -1,4 +1,4 @@
-Dragon Master Trilli — Third-party notices
+Dragon Adventures — Third-party notices
 ==========================================
 
 This game bundles open-source libraries. Full license texts are included under
@@ -21,4 +21,4 @@ procedural art direction are for Winston McCracken / family use of this build.
 Do not redistribute personal workbook photos or identifying documents (none are
 included in this release package).
 
-Game title: Dragon Master Trilli
+Game title: Dragon Adventures

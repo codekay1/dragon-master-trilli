@@ -1,14 +1,23 @@
-# Dragon Master Trilli (public runtime)
+# Dragon Adventures (public runtime)
 
 Internal QA candidate — **not** final quality-accepted.
 
 Offline-friendly Chromebook dragon adventure. This repository contains **compiled runtime assets only** (no game source, workbook, photos, or private intake).
 
+The playable title is **Dragon Adventures**. Repository and Pages path keep the historical name `dragon-master-trilli` so bookmarks and existing installs continue to work.
+
 ## Play
 
-Open the GitHub Pages URL for this repository (project site). On first visit while online, wait until the HUD shows **Offline ready**, then bookmark or install. After that you can cold-launch offline.
+Open the GitHub Pages URL for this repository (project site): https://codekay1.github.io/dragon-master-trilli/
+
+On first visit while online, wait until the HUD shows **Offline ready**, then bookmark or install. After that you can cold-launch offline.
 
 ZIP under `download/` is a static-file mirror for backup/hosting — **not** a double-click installer. Prefer the HTTPS Pages URL over `file://`.
+
+## Controls
+
+- **W** forward, **S** back, **A** left, **D** right (relative to camera)
+- Mouse look; Minecraft-style interaction; basic touch support
 
 ## Privacy & saves
 
@@ -20,7 +29,7 @@ ZIP under `download/` is a static-file mirror for backup/hosting — **not** a d
 
 ## Version
 
-See `VERSION.json` (`0.3.1-offline-gate`). Third-party notices: `NOTICE.txt` and `licenses/`.
+See `VERSION.json` (`0.4.1-spawn-frustum`). Third-party notices: `NOTICE.txt` and `licenses/`.
 
 ## Deploy note
 

@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    // Subpath/root safety for relative base './' (GitHub Pages project sites).
+    // If the path has no trailing slash and is not a file (.html), redirect to slash
+    // so ./assets and ./sw.js resolve under the project prefix, not the domain root.
+    (function () {
+      var p = location.pathname;
+      if (p.length > 1 && !p.endsWith('/') && !/\.[a-zA-Z0-9]+$/.test(p)) {
+        location.replace(p + '/' + location.search + location.hash);
+      }
+    })();
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#3a7fd4" />
-  <meta name="description" content="Dragon Master Trilli — offline dragon adventure" />
+  <meta name="description" content="Dragon Adventures — offline dragon adventure" />
   <link rel="icon" type="image/svg+xml" href="./assets/favicon-CZcMHXGO.svg" />
-  <title>Dragon Master Trilli</title>
-  <script type="module" crossorigin src="./assets/index-BDNz91aa.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-B5QSeQxk.css">
+  <title>Dragon Adventures</title>
+  <script type="module" crossorigin src="./assets/index-CFw4-Lsm.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CtUGrEP4.css">
 <link rel="manifest" href="./manifest.webmanifest"></head>
 <body>
   <div id="no-webgl" class="overlay hidden">
@@ -18,7 +29,7 @@
     </div>
   </div>
 
-  <canvas id="game" tabindex="0" aria-label="Dragon Master Trilli game view"></canvas>
+  <canvas id="game" tabindex="0" aria-label="Dragon Adventures game view"></canvas>
 
   <div id="hud">
     <div id="hud-top">
@@ -35,7 +46,10 @@
       </div>
     </div>
     <div id="crosshair" aria-hidden="true"></div>
+    <div id="context-prompt" aria-live="polite"></div>
+    <div id="dmg-layer" aria-hidden="true"></div>
     <div id="toast" role="status"></div>
+    <div id="selected-item"></div>
     <div id="objective" class="objective"></div>
     <div id="hotbar" aria-label="Inventory"></div>
   </div>
@@ -51,10 +65,15 @@
   <div id="title" class="overlay">
     <div class="panel title-panel">
       <div id="title-hero-preview" aria-hidden="true"></div>
-      <h1>Dragon Master Trilli</h1>
-      <p class="lead">Build your house, train a colorful dragon, and explore when <em>you</em> are ready.</p>
-      <button id="btn-start" type="button" class="primary">Play</button>
-      <button id="btn-howto" type="button" class="secondary">How to play</button>
+      <h1>Dragon Adventures</h1>
+      <p class="lead">Build a little camp, feed a colorful dragon, then explore when <em>you</em> are ready.</p>
+      <div class="title-actions">
+        <button id="btn-start" type="button" class="primary">Play</button>
+        <div class="row">
+          <button id="btn-howto" type="button" class="secondary">How to play</button>
+          <button id="btn-install-info" type="button" class="secondary">Install / offline</button>
+        </div>
+      </div>
       <p class="tiny">Offline-friendly · local saves · no accounts</p>
     </div>
   </div>
@@ -63,13 +82,30 @@
     <div class="panel wide">
       <h1>How to play</h1>
       <ul class="howto-list">
-        <li><kbd>WASD</kbd> move · double-tap <kbd>W</kbd> sprint · <kbd>Space</kbd> jump</li>
-        <li>Click game to look · Left click attack · Right click place / feed</li>
-        <li><kbd>1</kbd>–<kbd>7</kbd> inventory · <kbd>E</kbd> mount · feed a dragon to tame · <kbd>R</kbd> ready for battle</li>
+        <li><kbd>WASD</kbd> move · double-tap <kbd>W</kbd> sprint · <kbd>Space</kbd> jump (or take off when mounted)</li>
+        <li>Click the game to look around. <strong>Left click</strong> = sword swing. Prompts appear when something is in range.</li>
+        <li><kbd>1</kbd> Sword · <kbd>2</kbd> Drumstick (feed dragons) · <kbd>3</kbd> Bread (heal you) · <kbd>4</kbd>/<kbd>5</kbd> Wood/Stone blocks</li>
+        <li>Select drumstick, walk up to a dragon, <strong>right-click</strong> when prompted to feed &amp; tame. Then <kbd>E</kbd> mount · Space fly · land low · <kbd>E</kbd> dismount.</li>
+        <li>Select Wood/Stone to build: ghost preview shows placement · right-click place · <kbd>X</kbd> remove looking-at block. Place a few on the yellow pad, then press <kbd>R</kbd> Ready.</li>
         <li>Monsters stay peaceful until <strong>you</strong> hit them — only that one fights back.</li>
-        <li>Esc opens pause / save / customize.</li>
+        <li>Esc = pause / save / install tips.</li>
       </ul>
       <button id="btn-howto-close" type="button" class="primary">Got it</button>
+    </div>
+  </div>
+
+  <div id="install-panel" class="overlay hidden">
+    <div class="panel wide">
+      <h1>Install / offline</h1>
+      <ul class="install-list">
+        <li>Play online once until the HUD shows <strong>Offline ready</strong>.</li>
+        <li>Bookmark this page, or use your browser’s “Install” / “Add to …” option if offered (labels vary by Chrome version — we don’t invent ChromeOS menu names).</li>
+        <li>Quit the browser fully, turn network off, then open the bookmark — the game should load from cache.</li>
+        <li><strong>ZIP archive</strong> (download link in pause) is a static site backup for hosting — it is <em>not</em> a <code>file://</code> app installer.</li>
+        <li>Export Save makes a JSON backup. Local saves stay on this device for this site address; powerwash or clearing site data can erase them.</li>
+      </ul>
+      <p id="install-offline-status" class="note">Offline status: checking…</p>
+      <button id="btn-install-close" type="button" class="primary">Got it</button>
     </div>
   </div>
 
@@ -89,6 +125,8 @@
         <button id="btn-weather" type="button">Weather: Off</button>
         <button id="btn-appear" type="button">Customize Look</button>
         <button id="btn-help" type="button">Controls</button>
+        <button id="btn-install-pause" type="button">Install / offline</button>
+        <a id="btn-download-zip" class="file-btn" href="./download/dragon-master-trilli.zip" download>Download ZIP archive</a>
       </div>
       <div id="appear-panel" class="hidden">
         <label>Hair <input id="col-hair" type="color" value="#f5d94a" /></label>
@@ -96,7 +134,7 @@
         <label>Pants <input id="col-pants" type="color" value="#9b7bc8" /></label>
         <label>Shoes <input id="col-shoes" type="color" value="#4a2f6a" /></label>
       </div>
-      <p class="warn">Saves stay on this Chromebook (this site address). Export a backup — powerwash can erase local data. Persistence is requested, not guaranteed. Changing port/origin starts a fresh save.</p>
+      <p class="warn">Saves stay on this device for this site address. Export a JSON backup before powerwash or clearing site data. Persistence is requested, not guaranteed. Changing origin/port starts a fresh save. ZIP download is not a file:// installer.</p>
       <p class="note">ASSUMPTION: Level step after 5 monster defeats (Q11). “20 stars unlock levels” (Q28) stays optional/off by default.</p>
       <p id="save-msg" class="save-msg"></p>
       <p id="build-meta" class="tiny"></p>
