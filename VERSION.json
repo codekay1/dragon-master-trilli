@@ -1,10 +1,10 @@
 {
   "name": "Dragon Adventures",
-  "version": "0.9.2",
-  "builtAtUtc": "20261110T112902Z",
+  "version": "0.9.3-r2",
+  "builtAtUtc": "20261110T124938Z",
   "channel": "hosted-qa-release-candidate",
   "testApi": false,
   "sourcemaps": false,
   "downloadZip": "download/dragon-master-trilli.zip",
-  "notes": "Dragon Adventures 0.9.2: ?debug=keys shows a last-12 input log (type, key, code, repeat, target, document.hasFocus, handler decision, plus toast/FX show calls). It is inert without the flag and offline-safe (Workbox ignores the debug query). Q matches e.key when code is empty and still fires if the first event is a ghost-repeat after keyup. F uses the same nearby-dragon target as the ride prompt, so a friend beside you (even mostly off-screen) gets the friend toast. The Tap to keep playing title lives in the JS bundle as well as HTML, and the overlay also appears when pointer lock is lost mid-play. Schema v5, IDB/cacheId/test-* denylist unchanged. Do not mutate after SHA256SUMS."
+  "notes": "Dragon Adventures 0.9.3-r2: a mounted Q tap always runs the full 2.8s minimum burn (cone, mesh, glow, fire icon, Whoosh) even if keyup arrives in the same task or 0-50 ms later. The window is wall-clock and independent of rAF; a longer hold keeps burning until release. Fire visuals start only from Q (an on-foot Q no longer leaves a burst that can Whoosh after mounting). ?debug=keys logs the keydown line before toast/fx and labels that same keydown (a leftover on-foot decision cannot stick to the next Q). Pickaxe clicks aim-assist a rock that is in range and roughly in front, and still show Click to mine this rock. Schema v5, IDB/cacheId/test-* denylist unchanged. Do not mutate after SHA256SUMS."
 }
