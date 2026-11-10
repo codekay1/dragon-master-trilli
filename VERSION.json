@@ -1,10 +1,10 @@
 {
   "name": "Dragon Adventures",
-  "version": "0.8.0",
-  "builtAtUtc": "20261110T021255Z",
+  "version": "0.8.1",
+  "builtAtUtc": "20261110T030833Z",
   "channel": "hosted-qa-release-candidate",
   "testApi": false,
   "sourcemaps": false,
   "downloadZip": "download/dragon-master-trilli.zip",
-  "notes": "Dragon Adventures 0.8.0-r2: kid-delightful Market Town, edge-snapped house pieces with real textures, shaggy fur tufts, aerial world vista. Save schema v4 unchanged. IDB/cacheId/test-* denylist unchanged. Do not mutate after SHA256SUMS."
+  "notes": "Dragon Adventures 0.8.1: latch short key taps so Q breathes a 0.6s burst (hold keeps firing), F feeds a nearby dragon regardless of the held item, E is not dropped on a paused frame. Save schema v4 unchanged. IDB/cacheId/test-* denylist unchanged. Do not mutate after SHA256SUMS."
 }
