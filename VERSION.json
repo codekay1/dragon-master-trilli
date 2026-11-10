@@ -1,10 +1,10 @@
 {
   "name": "Dragon Adventures",
-  "version": "0.7.0",
-  "builtAtUtc": "20261109T220452Z",
+  "version": "0.8.0",
+  "builtAtUtc": "20261110T021255Z",
   "channel": "hosted-qa-release-candidate",
   "testApi": false,
   "sourcemaps": false,
   "downloadZip": "download/dragon-master-trilli.zip",
-  "notes": "Dragon Adventures 0.7.0-r2: rider camera over the shoulders with a forward-and-down neck; visible mouth-emitted fire breath; readable camp wildlife; fountain water arcs. Same 0.7.0 features and schema v3. IDB/cacheId/test-* denylist unchanged. Do not mutate after SHA256SUMS."
+  "notes": "Dragon Adventures 0.8.0-r2: kid-delightful Market Town, edge-snapped house pieces with real textures, shaggy fur tufts, aerial world vista. Save schema v4 unchanged. IDB/cacheId/test-* denylist unchanged. Do not mutate after SHA256SUMS."
 }

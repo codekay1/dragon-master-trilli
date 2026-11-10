@@ -18,8 +18,8 @@
   <meta name="description" content="Dragon Adventures — offline dragon adventure" />
   <link rel="icon" type="image/svg+xml" href="./assets/favicon-CZcMHXGO.svg" />
   <title>Dragon Adventures</title>
-  <script type="module" crossorigin src="./assets/index-DXamooey.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-OhGTj3Os.css">
+  <script type="module" crossorigin src="./assets/index-BTK7CKVm.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-HqNXdle2.css">
 <link rel="manifest" href="./manifest.webmanifest"></head>
 <body>
   <div id="no-webgl" class="overlay hidden">
@@ -43,6 +43,7 @@
         <span id="mode-pill" class="pill">Safe Build</span>
         <span id="offline-pill" class="pill dim">Offline…</span>
         <span id="detector" class="pill dim">Tracker: —</span>
+        <span id="coin-pill" class="pill coin-pill" title="Coins">Coins 0</span>
       </div>
       <div id="nav-row" aria-label="Navigation">
         <span id="nav-compass" title="Home">⌂</span>
@@ -58,6 +59,7 @@
     <div id="hotbar-wrap">
       <div id="hotbar" aria-label="Hotbar"></div>
       <button id="btn-bag" type="button" title="Backpack (I)" aria-label="Open backpack">Bag</button>
+      <button id="btn-build" type="button" title="Build house (H)" aria-label="Open build menu">Build</button>
     </div>
   </div>
 
@@ -138,6 +140,32 @@
     </div>
   </div>
 
+
+  <div id="shop-overlay" class="overlay hidden" role="dialog" aria-label="Shop">
+    <div class="panel wide">
+      <h2 id="shop-title">Shop</h2>
+      <p id="shop-keeper" class="tiny"></p>
+      <p id="shop-coins" class="tiny">You have 0 coins</p>
+      <div id="shop-list" class="shop-list"></div>
+      <button id="btn-shop-close" type="button" class="secondary">Close</button>
+    </div>
+  </div>
+
+  <div id="build-overlay" class="overlay hidden" role="dialog" aria-label="Build house">
+    <div class="panel wide">
+      <h2>Build your house</h2>
+      <p class="tiny">Gather wood and stone, pick a piece, then look at the ground and right-click to place. Press X to remove a piece you are looking at.</p>
+      <div id="build-list" class="shop-list">
+        <button type="button" data-piece="floor">Floor — 1 wood</button>
+        <button type="button" data-piece="wall">Wall — 2 wood</button>
+        <button type="button" data-piece="roof">Roof — 2 wood</button>
+        <button type="button" data-piece="door">Door — 2 wood</button>
+        <button type="button" data-piece="window">Window — 1 wood + 1 stone</button>
+      </div>
+      <p id="build-selected" class="tiny">Selected: none — open this menu with H</p>
+      <button id="btn-build-close" type="button" class="secondary">Close (H)</button>
+    </div>
+  </div>
   <div id="pause" class="overlay hidden">
     <div class="panel wide">
       <h1>Paused</h1>
