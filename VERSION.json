@@ -1,10 +1,10 @@
 {
   "name": "Dragon Adventures",
-  "version": "0.9.5-r3",
-  "builtAtUtc": "20261110T170912Z",
+  "version": "0.9.6",
+  "builtAtUtc": "20261110T185624Z",
   "channel": "hosted-qa-release-candidate",
   "testApi": false,
   "sourcemaps": false,
   "downloadZip": "download/dragon-master-trilli.zip",
-  "notes": "Dragon Adventures 0.9.5-r3: mounted fire visuals (cone, flame mesh, particles, #fire-glow, 🔥) stay at full strength from isFireActive()/burstLeft until the last ~200 ms fade. The snout particle stream is one reused Points draw (no extra burst per refill) so PROXY Low fire stays ≤70. The once-per-second fire tick logs each element's visible state, opacity and scale plus #fire-glow computed opacity and animation. The keep-playing overlay no longer appears on purposeful unlocks (B, I, Esc, or any open menu/panel); the next canvas click relocks. Pickaxe assist also counts rocks within ~3 m in the front half of view. ?debug=keys&rock=front or debug Key K faces/spawns a nearby rock (inert without ?debug). House building stays piece-based (Floor/Wall/Roof/Door/Window), not a single house kit. Schema v5, IDB/cacheId/test-* denylist unchanged. Do not mutate after SHA256SUMS."
+  "notes": "Dragon Adventures 0.9.6 on 0.9.5-r3. Rendering: pooled soft-sprite fire plus the reused fireBreathStream; visuals follow fireVisualStrength (full strength until the last ~200 ms fade); CSS animation none on #fire-glow/#fire-whoosh; no ridden-dragon shadow; High shadow map 512 PCF-soft and Medium 256 PCF; tree shadows within 18 m; on-foot High draw distance 130 m; live frame-time guard steps pixel ratio then shadows (can turn shadows off at pressure 2; thresholds unmeasured on a Chromebook); sky sun glow, water ripples, pine sway, and procedural clouds off on Low. Debug-only ?debug=keys&fire=hold keeps a Q-tap burst at full strength for 10 s (inert without ?debug). Mounted cone spawns past the snout (depthTest off, renderOrder 20, near 0.2). Mounted Q ignites woodpiles, trees, and monsters in the same visual cone (behind-snout slack + true perpendicular fat); burning a monster uses the player-hit path so they may retaliate, never first-strike. Biome monsters spawn as partner/baby families, wander in-biome, and flyers fly. Schema stays v5; IDB/cacheId/test-* denylist unchanged. Do not mutate after SHA256SUMS."
 }

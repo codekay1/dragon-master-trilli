@@ -16,3 +16,9 @@ Treat procedural textures as CC0-equivalent original work for this project.
 Shipped as WebP under public/textures/v1/. PNG masters are NOT in the game tree or precache
 (they live in the separate art workspace). Original procedural art for this game.
 Color: sRGB. Normals: linear, OpenGL +Y. No roughness maps.
+
+## Runtime sky puff (no new file)
+`texSkyPuff` in src/world/textures.ts paints a soft cloud on a canvas at startup.
+It is original work in this repository, not fetched from a network, and is
+CC0-equivalent like the other procedural textures. The sky gradient, sun disc,
+water ripple, and foliage sway are shader code in src/render/look.ts, not assets.
