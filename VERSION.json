@@ -1,10 +1,10 @@
 {
   "name": "Dragon Adventures",
-  "version": "0.9.3-r2",
-  "builtAtUtc": "20261110T124938Z",
+  "version": "0.9.4-r2",
+  "builtAtUtc": "20261110T142538Z",
   "channel": "hosted-qa-release-candidate",
   "testApi": false,
   "sourcemaps": false,
   "downloadZip": "download/dragon-master-trilli.zip",
-  "notes": "Dragon Adventures 0.9.3-r2: a mounted Q tap always runs the full 2.8s minimum burn (cone, mesh, glow, fire icon, Whoosh) even if keyup arrives in the same task or 0-50 ms later. The window is wall-clock and independent of rAF; a longer hold keeps burning until release. Fire visuals start only from Q (an on-foot Q no longer leaves a burst that can Whoosh after mounting). ?debug=keys logs the keydown line before toast/fx and labels that same keydown (a leftover on-foot decision cannot stick to the next Q). Pickaxe clicks aim-assist a rock that is in range and roughly in front, and still show Click to mine this rock. Schema v5, IDB/cacheId/test-* denylist unchanged. Do not mutate after SHA256SUMS."
+  "notes": "Dragon Adventures 0.9.4-r2: a mounted fire burst has a single off-owner that refuses to end the cone or glow while now < fireBurstUntil unless the reason is a *confirmed* dismount, menu, or death (a one-frame riding flicker cannot pass as dismount). Every fx fire-cone/glow off line includes reason= and burstLeft=; a once-per-second fx fire tick logs the remaining ms while fire is active. Pickaxe misses log the nearest rock's distance, angle, and assist decision, assist is range+1 m at dot 0.2, and the toast says which way to walk (Nearest rock: 6 m to your left). B toggles Build (I stays Bag); both hotkeys release pointer lock; the on-screen Build and Bag buttons hit-test even while locked; the Build button shows a B hint. Schema v5, IDB/cacheId/test-* denylist unchanged. Do not mutate after SHA256SUMS."
 }

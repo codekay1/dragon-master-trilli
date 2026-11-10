@@ -18,8 +18,8 @@
   <meta name="description" content="Dragon Adventures — offline dragon adventure" />
   <link rel="icon" type="image/svg+xml" href="./assets/favicon-CZcMHXGO.svg" />
   <title>Dragon Adventures</title>
-  <script type="module" crossorigin src="./assets/index-m6Ge8gRU.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BUKyvPxO.css">
+  <script type="module" crossorigin src="./assets/index-1BWUeOKN.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-GJhNtptw.css">
 <link rel="manifest" href="./manifest.webmanifest"></head>
 <body>
   <div id="no-webgl" class="overlay hidden">
@@ -60,8 +60,8 @@
     <div id="objective" class="objective"></div>
     <div id="hotbar-wrap">
       <div id="hotbar" aria-label="Hotbar"></div>
-      <button id="btn-bag" type="button" title="Backpack (I)" aria-label="Open backpack">Bag</button>
-      <button id="btn-build" type="button" title="Build house (H)" aria-label="Open build menu">Build</button>
+      <button id="btn-bag" type="button" title="Backpack (I)" aria-label="Open backpack">Bag <span class="key-hint">I</span></button>
+      <button id="btn-build" type="button" title="Build house (B)" aria-label="Open build menu (B)">Build <span class="key-hint">B</span></button>
     </div>
   </div>
 
@@ -171,8 +171,8 @@
         <button type="button" data-piece="door">Door — 2 wood</button>
         <button type="button" data-piece="window">Window — 1 wood + 1 stone</button>
       </div>
-      <p id="build-selected" class="tiny">Selected: none — open this menu with H</p>
-      <button id="btn-build-close" type="button" class="secondary">Close (H)</button>
+      <p id="build-selected" class="tiny">Selected: none — open this menu with B (or H)</p>
+      <button id="btn-build-close" type="button" class="secondary">Close (B)</button>
     </div>
   </div>
   <div id="pause" class="overlay hidden">
