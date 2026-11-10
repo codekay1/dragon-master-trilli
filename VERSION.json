@@ -1,10 +1,10 @@
 {
   "name": "Dragon Adventures",
-  "version": "0.9.0-r3",
-  "builtAtUtc": "20261110T080109Z",
+  "version": "0.9.1-r2",
+  "builtAtUtc": "20261110T102417Z",
   "channel": "hosted-qa-release-candidate",
   "testApi": false,
   "sourcemaps": false,
   "downloadZip": "download/dragon-master-trilli.zip",
-  "notes": "Dragon Adventures 0.9.0-r3: review fix on rejected 0.9.0. Chunky grey rock gems bounce out, sit at least 20s, and magnet-collect with a +1 rock piece toast — autosave never vacuums them. Rocks show crack stages before they break. Burning trees have large flame tongues, glow, smoke, and char over 6–8s, then a stump with embers and a sapling. Monsters catch fire 4–6m ahead, flee with flames, poof in a sparkle burst, and drop bigger spinning coins. Sitting looks out from the bench at seated eye height. Camp cushions use fabric colours; forest wild dragons are russet. Flight 3× walk, schema v5, IDB/cacheId/test-* denylist unchanged. Do not mutate after SHA256SUMS."
+  "notes": "Dragon Adventures 0.9.1-r2: Low companion LOD is a single vertex-coloured mesh so animals stay under the 70-draw cap (ideally ≤68) with no High visual change. After an update or any load where the page is unfocused, and whenever the window blurs mid-play, a Tap to keep playing overlay pauses the game until a click or tap refocuses the canvas. Pickaxe tooltip is context-aware (Click to mine this rock / Walk up to a rock to mine). Mounted mining uses a wider look-ray so a rock centred within about 6 m can be mined from the saddle. Schema v5, IDB/cacheId/test-* denylist unchanged. Do not mutate after SHA256SUMS."
 }
