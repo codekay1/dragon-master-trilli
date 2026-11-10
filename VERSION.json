@@ -1,10 +1,10 @@
 {
   "name": "Dragon Adventures",
-  "version": "0.8.1",
-  "builtAtUtc": "20261110T030833Z",
+  "version": "0.8.2",
+  "builtAtUtc": "20261110T041957Z",
   "channel": "hosted-qa-release-candidate",
   "testApi": false,
   "sourcemaps": false,
   "downloadZip": "download/dragon-master-trilli.zip",
-  "notes": "Dragon Adventures 0.8.1: latch short key taps so Q breathes a 0.6s burst (hold keeps firing), F feeds a nearby dragon regardless of the held item, E is not dropped on a paused frame. Save schema v4 unchanged. IDB/cacheId/test-* denylist unchanged. Do not mutate after SHA256SUMS."
+  "notes": "Dragon Adventures 0.8.2: a Q tap breathes for ~1.2s and leaves a lingering glow; keys reach the game from capture-phase window listeners even if a HUD button is focused (text fields excluded); F on a tamed dragon shows a friend toast, heart puff, and a snack if she is hungry. Save schema v4 unchanged. IDB/cacheId/test-* denylist unchanged. Do not mutate after SHA256SUMS."
 }
