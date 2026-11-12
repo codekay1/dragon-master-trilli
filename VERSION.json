@@ -1,10 +1,10 @@
 {
   "name": "Dragon Adventures",
-  "version": "0.9.6",
-  "builtAtUtc": "20261110T185624Z",
+  "version": "0.9.7-r2",
+  "builtAtUtc": "20261112T182722Z",
   "channel": "hosted-qa-release-candidate",
   "testApi": false,
   "sourcemaps": false,
   "downloadZip": "download/dragon-master-trilli.zip",
-  "notes": "Dragon Adventures 0.9.6 on 0.9.5-r3. Rendering: pooled soft-sprite fire plus the reused fireBreathStream; visuals follow fireVisualStrength (full strength until the last ~200 ms fade); CSS animation none on #fire-glow/#fire-whoosh; no ridden-dragon shadow; High shadow map 512 PCF-soft and Medium 256 PCF; tree shadows within 18 m; on-foot High draw distance 130 m; live frame-time guard steps pixel ratio then shadows (can turn shadows off at pressure 2; thresholds unmeasured on a Chromebook); sky sun glow, water ripples, pine sway, and procedural clouds off on Low. Debug-only ?debug=keys&fire=hold keeps a Q-tap burst at full strength for 10 s (inert without ?debug). Mounted cone spawns past the snout (depthTest off, renderOrder 20, near 0.2). Mounted Q ignites woodpiles, trees, and monsters in the same visual cone (behind-snout slack + true perpendicular fat); burning a monster uses the player-hit path so they may retaliate, never first-strike. Biome monsters spawn as partner/baby families, wander in-biome, and flyers fly. Schema stays v5; IDB/cacheId/test-* denylist unchanged. Do not mutate after SHA256SUMS."
+  "notes": "Dragon Adventures 0.9.7-r2 on 0.9.7. Field Monster eye slits: a dark (#1a1020) vertical ellipse sits in front of each eye-white (about 28% of eye width and 75% of eye height), offset along +Z so it never hides inside the white. Teeth, horns, arms, legs, body, other biome monsters, behavior, families, spawns, fire, saves (schema v5), IDB/cacheId/test-* denylist, and perf caps are unchanged. Do not mutate after SHA256SUMS."
 }

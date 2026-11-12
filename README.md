@@ -2,7 +2,7 @@
 
 Offline-friendly Chromebook dragon adventure. This repository contains **compiled runtime assets only** (no game source, workbook, photos, wishlist, or private intake).
 
-Playable title: **Dragon Adventures** v0.9.6. Repository path keeps `dragon-master-trilli` so bookmarks and saves continue to work.
+Playable title: **Dragon Adventures** v0.9.7-r2. Repository path keeps `dragon-master-trilli` so bookmarks and saves continue to work.
 
 ## Play
 
@@ -30,4 +30,4 @@ ZIP under `download/` is a static-file mirror — prefer the HTTPS Pages URL ove
 
 ## Version
 
-See `VERSION.json` (`0.9.6`). Notices: `NOTICE.txt`, `ASSET-LICENSES.txt`, `licenses/`.
+See `VERSION.json` (`0.9.7-r2`). Notices: `NOTICE.txt`, `ASSET-LICENSES.txt`, `licenses/`.
